@@ -41,6 +41,12 @@ Please, consider helping project via [contributions](https://github.com/yii2-sta
     cd myproject.com
     composer run-script docker:build
     ```
+    for test task migration
+     ```
+    docker-compose exec -T app php frontend/yii migrate/up
+    docker-compose up
+    ```
+    
 5. Go to [http://yii2-starter-kit.localhost](http://yii2-starter-kit.localhost)
 
 ## FEATURES
