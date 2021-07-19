@@ -7,6 +7,11 @@ return [
     'enablePrettyUrl' => true,
     'showScriptName' => false,
     'rules' => [
+        
+        ['pattern' => 'map/map/index', 'route' => 'map/map/index'],
+        ['pattern' => 'map/driverroute', 'route' => 'map/driverroute'],
+        ['pattern' => 'map/driver', 'route' => 'map/index'],
+        
         // Pages
         ['pattern' => 'page/<slug>', 'route' => 'page/view'],
 

@@ -33,13 +33,17 @@ class FrontendAsset extends AssetBundle
     /**
      * @var array
      */
+    
     public $js = [
+        //'app-react.js',
+        //'app-react-dom.js',
+        'app-gmaps.js',
         'app.js',
-    ];
-
+        ];
     /**
      * @var array
      */
+    
     public $depends = [
         YiiAsset::class,
         BootstrapAsset::class,

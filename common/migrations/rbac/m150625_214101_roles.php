@@ -9,6 +9,7 @@ class m150625_214101_roles extends Migration
      * @return bool|void
      * @throws \yii\base\Exception
      */
+    
     public function up()
     {
         $this->auth->removeAll();
@@ -33,6 +34,7 @@ class m150625_214101_roles extends Migration
     /**
      * @return bool|void
      */
+    
     public function down()
     {
         $this->auth->remove($this->auth->getRole(User::ROLE_ADMINISTRATOR));

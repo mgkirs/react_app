@@ -5,7 +5,6 @@
  * Date: 7/4/14
  * Time: 2:01 PM
  */
-
 namespace frontend\controllers;
 
 use common\models\Page;

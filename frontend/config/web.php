@@ -3,15 +3,32 @@ $config = [
     'homeUrl' => Yii::getAlias('@frontendUrl'),
     'controllerNamespace' => 'frontend\controllers',
     'defaultRoute' => 'site/index',
-    'bootstrap' => ['maintenance'],
+    'bootstrap' => [
+        'maintenance'
+    ],
     'modules' => [
         'user' => [
             'class' => frontend\modules\user\Module::class,
             'shouldBeActivated' => false,
-            'enableLoginByPass' => false,
+            'enableLoginByPass' => false
+        ],
+        'map' => [
+            'class' => frontend\modules\map\Module::class
         ],
     ],
+    
     'components' => [
+        'assetManager' => [
+            'bundles' => [
+                'dosamigos\google\maps\MapAsset' => [
+                    'options' => [
+                        'key' => '',//direction api:AIzaSyCKcAnPgeVyDqwYg6siTlnuInOQCLaJxwA
+                        'language' => 'id',
+                        'version' => '3.1.18'
+                    ]
+                ]
+            ]
+        ],
         'authClientCollection' => [
             'class' => yii\authclient\Collection::class,
             'clients' => [
@@ -29,7 +46,7 @@ $config = [
                         'name',
                         'email',
                         'first_name',
-                        'last_name',
+                        'last_name'
                     ]
                 ]
             ]
@@ -52,7 +69,9 @@ $config = [
         'user' => [
             'class' => yii\web\User::class,
             'identityClass' => common\models\User::class,
-            'loginUrl' => ['/user/sign-in/login'],
+            'loginUrl' => [
+                '/user/sign-in/login'
+            ],
             'enableAutoLogin' => true,
             'as afterLogin' => common\behaviors\LoginTimestampBehavior::class
         ]
