@@ -1,4 +1,3 @@
-# Yii 2 Starter Kit
 
 <!-- BADGES/ -->
 
@@ -41,7 +40,7 @@ Please, consider helping project via [contributions](https://github.com/yii2-sta
     cd myproject.com
     composer run-script docker:build
     ```
-    for test task migration
+    for app migration
      ```
     docker-compose exec -T app php frontend/yii migrate/up
     docker-compose up
