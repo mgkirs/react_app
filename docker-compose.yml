@@ -10,6 +10,10 @@ services:
       - mailcatcher
     env_file:
       - .env
+    dns:
+    - 8.8.8.8
+    - 4.4.4.4
+    - 0.0.0.0
 
   webpacker:
     image: node:9-alpine
@@ -42,6 +46,6 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: yii2-starter-kit
-      MYSQL_USER: ysk_dbu
-      MYSQL_PASSWORD: ysk_pass
+      MYSQL_DATABASE: rx2go
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
