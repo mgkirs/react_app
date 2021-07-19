@@ -8,10 +8,17 @@ RUN apt-get update && apt-get install -y \
         wget \
         git \
             --no-install-recommends
+            
+RUN apt-get install -y \
+        libzip-dev \
+        zip \
+  && docker-php-ext-configure zip --with-libzip \
+  && docker-php-ext-install zip
 
 RUN docker-php-ext-install zip intl mbstring pdo_mysql exif \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install gd
+
 
 RUN pecl install -o -f xdebug \
     && rm -rf /tmp/pear
