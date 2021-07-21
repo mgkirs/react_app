@@ -34,7 +34,7 @@ Please, consider helping project via [contributions](https://github.com/yii2-sta
 1. [Install composer](https://getcomposer.org)
 2. [Install docker](https://docs.docker.com/install/)
 3. [Install docker-compose](https://docs.docker.com/compose/install/)
-4. for app migration
+4. Building, migration, start
     ```
     composer docker:build
     docker-compose exec -T app php frontend/yii migrate/up
